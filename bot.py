@@ -1,3 +1,4 @@
+import os
 import json
 from telegram import Update
 from telegram.ext import (
@@ -8,7 +9,8 @@ from telegram.ext import (
     filters
 )
 
-TOKEN = "8020940537:AAHElZ7zf8y1hQ5WhIyMxqDyK65UiHGdLBU"
+
+TOKEN = os.getenv("BOT_TOKEN")
 FILE = "commands.json"
 
 def load_commands():
